@@ -1,14 +1,13 @@
-n=int(input())
-c=0
-for i in range(n):
-    a=int(input())
-    l=list(map(int,input().split()))
-    for j in range(1,a):
-        if l[j-1]>l[j]:
-            c=c+1
+p=int(input())
+while p:
+    n=int(input())
+    a=list(map(int,input().split()))
+    c=0
+    for i in range(1,n):
+        if a[i-1]>a[i]:
+            c+=1
     if c==0:
         print(c)
     else:
-        ma=max(l)
-        mi=min(l)
-        print(ma-mi)
+        print(max(a)-min(a))
+    p-=1
